@@ -51,7 +51,7 @@ export default {
       let button = '';
       let info = product.link
       console.log(info);
-      button += "<iframe src = " + info + " allowfullscreen>" + "</iframe>" + "<p> Double Click the video to watch in fullscreen! </p>";
+      button += "<iframe src = " + info + " allowfullscreen>" + "</iframe>" + "<p> Double Click the video to watch in fullscreen! or click on the video title to go to youtube officially !</p>";
       console.log(button);
       return document.getElementById("test").innerHTML = button;
 
