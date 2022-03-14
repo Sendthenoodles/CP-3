@@ -1,5 +1,5 @@
 <template>
-<div> 
+<div>
   <div class="wrapper">
     <div class="search">
       <form class="pure-form">
@@ -13,16 +13,18 @@
 
 
 <style scoped>
+
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .search {
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 50%;
+  width: 60%;
 }
 
 form {

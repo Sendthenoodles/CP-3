@@ -141,8 +141,7 @@ let products = [{
     price: "$30",
     image: "Goat.png",
     genre: "Multiplayer"
-  },
-
+  }
 ]
 
 export default products;

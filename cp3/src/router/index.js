@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import Mystery from '../views/GameMystery.vue'
 import Horror from '../views/GameHorror.vue'
 import Souls from '../views/GameSouls.vue'
-import Multi from '../views/GameMulti.vue'
+import Multiplayer from '../views/GameMultiplayer.vue'
 
 
 
@@ -33,8 +33,8 @@ const routes = [
  },
  {
    path: '/Multiplayer',
-   name: 'Multi',
-   component: Multi
+   name: 'Multiplayer',
+   component: Multiplayer
  },
   {
     path: '/about',

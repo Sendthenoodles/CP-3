@@ -1,13 +1,12 @@
 <template>
 <div class="wrapper">
   <div class="products">
-    <div class="product" v-for="product in products" :key="product.id">
+    <div class="product" v-for="product in products" :key="product.name">
       <div class="info">
         <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
       </div>
       <div class="image">
-        <img :src="'/games/'+product.image">
+        <img :src="'/games/' + product.image">
       </div>
       <div class="price">
         <h2>{{product.price}}</h2>
@@ -41,7 +40,7 @@ methods: {
           product.quantity = 1;
           this.$root.$data.cart.push(product);
           this.$root.$data.ItemsInCart += 1;
-    
+
       }
     }
   }
@@ -49,71 +48,48 @@ methods: {
 </script>
 
 <style scoped>
+
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .products {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .product {
-  margin: 10px;
-  margin-top: 50px;
-  width: 200px;
+  margin: 50px;
+  width: 250px;
 }
 
 .product img {
-  border: 2px solid #333;
-  height: 250px;
-  width: 200px;
-  object-fit: cover;
-}
-
-.product .image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-}
-
-.info {
-  background: #F2921D;
-  color: #000;
-  padding: 10px 30px;
-  height: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 300px;
 }
 
 .info h1 {
-  font-size: 16px;
+  font-size: 25px;
 }
 
 .info h2 {
-  font-size: 14px;
-}
-
-.info p {
-  margin: 0px;
-  font-size: 10px;
-}
-
-
-.price {
-  display: flex;
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
 }
 
 button {
-  height: 50px;
-  background: #000;
   color: white;
-  border: none;
+  background-color: #343434;
+  padding: 20px;
 }
 
-.auto {
-  margin-left: auto;
-}
+
 </style>
