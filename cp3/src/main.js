@@ -7,7 +7,8 @@ Vue.config.productionTip = false
 
 let data = {
   products: products,
-  watch: [],
+  WatchList: [],
+  ItemsInWatchList: 0,
 }
 
 new Vue({

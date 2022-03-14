@@ -5,6 +5,7 @@ import Mystery from '../views/GameMystery.vue'
 import Horror from '../views/GameHorror.vue'
 import Souls from '../views/GameSouls.vue'
 import Multiplayer from '../views/GameMultiplayer.vue'
+import WatchList from "../views/WatchList.vue"
 
 
 
@@ -35,6 +36,11 @@ const routes = [
    path: '/Multiplayer',
    name: 'Multiplayer',
    component: Multiplayer
+ },
+ {
+   path: '/WatchList',
+   name: 'WatchList',
+   component: WatchList
  },
   {
     path: '/about',

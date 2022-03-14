@@ -1,15 +1,19 @@
 <template>
 <div id="app">
   <div class="header">
-    <a href = "https://github.com/Sendthenoodles/CP-3/tree/main/cp3"> <img src = "/images/github.png" height = 50px width =50px></a>
+    <a href="https://github.com/Sendthenoodles/CP-3/tree/main/cp3"> <img src="/images/github.png" height=50px width=50px></a>
     <img src="/images/hand.png">
 
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/Horror">Horror Games </router-link>  |
-        <router-link to="/Mystery">Mystery Games</router-link> |
-          <router-link to="/Souls">Soul Series</router-link> |
-            <router-link to="/Multiplayer">Multiplayer</router-link> |
+      <router-link to="/Horror">Horror Games </router-link> |
+      <router-link to="/Mystery">Mystery Games</router-link> |
+      <router-link to="/Souls">Soul Series</router-link> |
+      <router-link to="/Multiplayer">Multiplayer</router-link> |
+      <router-link to="/WatchList">
+        {{ ItemsInWatchList }}
+        <img src="/images/cart.png" height=50px width=50px>
+      </router-link>
     </div>
   </div>
   <div class="content">
@@ -18,9 +22,17 @@
 </div>
 </template>
 
+<script>
+export default {
+  computed: {
+    ItemsInWatchList() {
+      return this.$root.$data.WatchList.length;
+    }
+  }
+}
+</script>
 
 <style>
-
 body {
   margin: 0px;
 }

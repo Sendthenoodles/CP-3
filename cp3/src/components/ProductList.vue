@@ -10,7 +10,7 @@
       </div>
       <div class="price">
         <h2>{{product.price}}</h2>
-        <button class="auto" v-on:click = "pushToCart(product)">Add to Cart</button>
+        <button class="auto" v-on:click = "pushToWatchList(product)">Add to Watch List</button>
       </div>
     </div>
   </div>
@@ -26,23 +26,19 @@ props: {
 },
 
 methods: {
-  pushToCart(product) // singular product
+  pushToWatchList(product) // singular product
   {
 
-    if (this.$root.$data.cart.includes(product))
+    if (this.$root.$data.WatchList.includes(product))
       {
-          var save = this.$root.$data.cart.indexOf(product);
-          this.$root.$data.cart[save].quantity += 1;
-          product.quantity = product.quantity + 1;
-      }
-      else
-      {
-          product.quantity = 1;
-          this.$root.$data.cart.push(product);
-          this.$root.$data.ItemsInCart += 1;
+        this.$root.$data.numItemsInWatchList += 1;
 
+      } else {
+
+        this.$root.$data.WatchList.push(product);
+        this.$root.$data.numItemsInWatchList += 1;
       }
-    }
+    },
   }
 }
 </script>
@@ -61,6 +57,7 @@ methods: {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
 }
 
 .product {
@@ -77,6 +74,7 @@ methods: {
 
 .info h1 {
   font-size: 25px;
+
 }
 
 .info h2 {
